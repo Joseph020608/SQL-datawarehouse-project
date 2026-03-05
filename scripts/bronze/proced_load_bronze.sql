@@ -141,8 +141,8 @@ BEGIN
 	BEGIN CATCH
 		PRINT '-----------------------------';
 		PRINT 'Error occured during loading bronze layer';
-		PRINT 'Error message' + ERROR_MESSAGE();
-		PRINT 'Error message' + CAST(ERROR_NUMBER() AS NVARCHAR);
+		PRINT 'Error message: ' + ERROR_MESSAGE();
+		PRINT 'Error number: ' + CAST(ERROR_NUMBER() AS NVARCHAR);
 		PRINT '-----------------------------';
 	END CATCH
 END
