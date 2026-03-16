@@ -132,7 +132,7 @@ Examples include:
 
 ## Repository structure
 
-- datasets/ -- raw source data
-- scripts / -- ETL scripts and analytial queries
-- docs/ -- architecture and data model diagrams
-- tests/ -- data quality checks
+- datasets/     -- raw source data
+- scripts/      -- ETL scripts and analytial queries
+- documents/    -- architecture and data model diagrams
+- tests/        -- data quality checks
