@@ -157,3 +157,11 @@ Data modeling: Star schema
 ETL: SQL stored procedures  
 Architecture: Medallion (Bronze / Silver / Gold)  
 Documentation: Draw.io
+
+## Implementation Highlights
+
+- Layered data warehouse architecture (Bronze / Silver / Gold)
+- Dimensional modeling using a star schema
+- SQL based ETL pipelines
+- Data quality validation queries
+- Analytical SQL reporting
