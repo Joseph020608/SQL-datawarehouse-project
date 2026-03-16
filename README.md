@@ -103,7 +103,7 @@ Dimension tables:
 - dim_customers
 - dim_products
 
-![Star schema](C:/Users/Pc/OneDrive/Desktop/Estudio/Proyectos/Warehouse/star_schema_diagram.png)
+![Star schema](documents/data_model/star_schema_diagram.png)
 
 ## ETL pipeline
 
