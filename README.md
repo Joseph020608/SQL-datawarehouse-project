@@ -1,5 +1,9 @@
 # DataWarehouse project
 
+This project demonstrates the design and implementation af a data warehouse using  SQL server.
+
+The solution integrates multiple data sources, applies ETL processes and builds a dimensional model optimized for analytical reporting.
+
 ### **Objective**
 
 Develop a modern data warehouse using SQL server to consolidate sales data, enabling analytical reporting and informed decision-making.
@@ -45,7 +49,7 @@ These insights empower stakeholders with key business metrics enabling strategic
 - All the names must start with the source system name, and table names must match their original names without renaming
 - `<sourcesystem>_<entity>`
     - `<sourcesystem>` is the name of the source system, for example crm or erp
-    - `<entity>` is the extact table name from the source system
+    - `<entity>` is the exact table name from the source system
     - Example: crm_customer_info -> customer information from the crm system
 
 ### Gold rules
@@ -92,9 +96,9 @@ The project follows a layered data warehouse architecture:
 
 ## Dimensional data model
 
-The analytical layer follows a start schema design.
+The analytical layer follows a star schema design.
 
-The fact table stores transactional sales data while dimensiontables provide descriptive attributes used for filtering and aggregations.
+The fact table stores transactional sales data while dimension tables provide descriptive attributes used for filtering and aggregations.
 
 Fact table:
 - Fact sales
@@ -119,6 +123,14 @@ Data is processed through three stages:
 
 3. **Loading**
     - Data loaded into bronze, silver layers using stored procedures
+  
+## Data Quality Checks
+
+Data validation queries are implemented to ensure:
+
+- Referential integrity between fact and dimension tables
+- Valid categorical values
+- Consistency of key business attributes
 
 ## Analytical SQL queries
 
@@ -136,3 +148,12 @@ Examples include:
 - scripts/      -- ETL scripts and analytial queries
 - documents/    -- architecture and data model diagrams
 - tests/        -- data quality checks
+
+
+## Tech Stack
+
+Database: SQL server
+Data modeling: Star schema  
+ETL: SQL stored procedures  
+Architecture: Medallion (Bronze / Silver / Gold)  
+Documentation: Draw.io
