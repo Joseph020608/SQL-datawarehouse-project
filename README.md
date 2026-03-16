@@ -113,7 +113,7 @@ Dimension tables:
 
 Detailed documentation of the analytical layer tables and columns available in the data dictionary.
 
-[Data Catalog](documents/data_dictionary.md)
+[Data Dictionary](documents/data_dictionary.md)
 
 ## ETL pipeline
 
