@@ -109,6 +109,12 @@ Dimension tables:
 
 ![Star schema](documents/data_model/star_schema_diagram.png)
 
+## Data Dictionary
+
+Detailed documentation of the analytical layer tables and columns available in the data dictionary.
+
+[Data Catalog](documents/data_dictionary.md)
+
 ## ETL pipeline
 
 Data is processed through three stages:
