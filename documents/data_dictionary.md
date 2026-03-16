@@ -1,4 +1,4 @@
-# Data catalog
+# Data dictionary
 
 The purpose of this file is to provide the user a clear guide of each table in the gold layer for a better understanding of this layer.
 
