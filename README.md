@@ -12,6 +12,7 @@ Develop a modern data warehouse using SQL server to consolidate sales data, enab
 - **Scope:** Focus on the latest dataset only, historization of data is not required
 - **Documentation:** Provide clear documentation of the data model to support both business stakeholders and analytics team.
 
+
 ## BI: analytics and reporting (Data analysis)
 
 **Objective**
@@ -66,7 +67,7 @@ These insights empower stakeholders with key business metrics enabling strategic
     - Example: customer_key -> surrogate key in the dim_customers table
 
 ### Technical columns
-- All technical columns must start with the preffix dwh_, followed by a descriptive name indicating the column purpose
+- All technical columns must start with the prefix dwh_, followed by a descriptive name indicating the column purpose
 - `dwh_<column_name>`
     - dwh, prefix exclusively for system generated meta data
     - <column_name> descriptive name indicating column purpose
@@ -79,3 +80,59 @@ These insights empower stakeholders with key business metrics enabling strategic
     - Example:
         - load_bronze -> stored procedure for loading data into the bronze layer
         - load_silver -> stored procedure for loading data into the silver layer
+
+## Data warehouse architecture
+
+The project follows a layered data warehouse architecture:
+- **Bronze layer:** Raw data ingestiion form source systems (CRM and ERP)
+- **Silver layer:** Data cleansing, standardization and integration
+- **Gold layer:** Business ready dimensional moder oprimized for analytical queries
+
+![Architecture](C:/Users/Pc/OneDrive/Desktop/Estudio/Proyectos/Warehouse/Architecture_diagram.png)
+
+## Dimensional data model
+
+The analytical layer follows a start schema design.
+
+The fact table stores transactional sales data while dimensiontables provide descriptive attributes used for filtering and aggregations.
+
+Fact table:
+- Fact sales
+
+Dimension tables:
+- dim_customers
+- dim_products
+
+![Star schema](C:/Users/Pc/OneDrive/Desktop/Estudio/Proyectos/Warehouse/star_schema_diagram.png)
+
+## ETL pipeline
+
+Data is processed through three stages:
+
+1. **Extraction**
+    - Source CSV files from ERP and CRM systems
+
+2. **Transformation**
+    - Data cleaning
+    - Standardization
+    - Integration between sources
+
+3. **Loading**
+    - Data loaded into bronze, silver layers using stored procedures
+
+## Analytical SQL queries
+
+The project inludes analytical queries designed to extract business insights from the data warehouse:
+
+Examples include:
+- Customer segmentation
+- Sales trend over time
+- Product performance analysis
+- Magnitude and raking analysis
+
+## Repository structure
+
+datasets/ -- raw source data
+scripts / -- ETL scripts and analytial queries
+docs/ -- architecture and data model diagrams
+tests/ -- data quality checks
