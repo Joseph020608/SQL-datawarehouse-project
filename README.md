@@ -88,7 +88,7 @@ The project follows a layered data warehouse architecture:
 - **Silver layer:** Data cleansing, standardization and integration
 - **Gold layer:** Business ready dimensional moder oprimized for analytical queries
 
-![Architecture](C:/Users/Pc/OneDrive/Desktop/Estudio/Proyectos/Warehouse/Architecture_diagram.png)
+![Architecture](architecture/Architecture_diagram.png)
 
 ## Dimensional data model
 
